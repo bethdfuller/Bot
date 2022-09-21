@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+<!--Intro-->
+
+<category>
+    <pattern>start</pattern>
+    <template> 
+        Hello! 👋 I am an advisor in the Computer Science department at WGU. 
+        I would like to help you explore career options.<break/>
+        <break/>
+        You can begin with the quiz or click any career option that looks 
+        interesting to you! <break/> 
+        <break/>
+        You can also click the link below to view information about the 
+        WGU Computer Science degree.<break/> 
+        <break/>
+    <link>
+        <text>WGU Computer Science Degree
+        </text>
+         <url>https://www.wgu.edu/online-it-degrees/computer-science.html</url>
+    </link>        
+        
+            <button>
+                <text>Quiz</text>
+                <postback>Q1</postback>
+            </button>
+          
+            <button>
+                <text>Software Developer</text>
+                <postback>softwaredeveloper</postback>
+            </button>
+            
+            <button>
+                <text>Data Scientist</text>
+                <postback>datascientist</postback>
+            </button>
+            
+            <button>
+                <text>Game Developer</text>
+                <postback>gamedeveloper</postback>
+            </button> 
+            
+            <button>
+                <text>Cyber Security</text>
+                <postback>cybersecurity</postback>
+            </button>  
+            
+            <button>
+                <text>Project Management</text>
+                <postback>projectmanagement</postback>
+            </button>   
+    </template>
+</category>
+
+<!--Jobs-->
+<!--Source for Career Information: Wikipedia/https://www.wikipedia.org/-->
+<!--Software Developer-->
+<category>
+    <pattern>softwaredeveloper</pattern>
+        <template>
+            You should consider becoming a Software Developer. Here is a link to some information.
+        <link>
+            <text>Software development wiki</text>
+            <url>https://en.wikipedia.org/wiki/Software_development</url>
+        </link>
+        
+    <button>
+        <text>Start over!</text>
+        <postback>start</postback>
+    </button>        
+        
+        </template>
+</category>
+
+<!--Data Scientist-->
+<category>
+    <pattern>datascientist</pattern>
+        <template>
+            You should consider becoming a Data Scientist. Here is a link to some information.
+        <link>
+            <text>Data Science wiki</text>
+            <url>https://en.wikipedia.org/wiki/Data_science</url>
+        </link>
+        
+    <button>
+        <text>Start over!</text>
+        <postback>start</postback>
+    </button>        
+        
+        </template>
+</category>
+
+<!--Game Developer-->
+<category>
+    <pattern>gamedeveloper</pattern>
+        <template>
+            You should consider becoming a Game Developer. Here is a link to some information.
+        <link>
+            <text>Game Developer wiki</text>
+            <url>https://en.wikipedia.org/wiki/Video_game_developer</url>
+        </link>
+        
+    <button>
+        <text>Start over!</text>
+        <postback>start</postback>
+    </button>           
+        
+        </template>
+</category>
+
+<!--Cyber Security -->
+<category>
+    <pattern>cybersecurity</pattern>
+        <template>
+            You should consider becoming a Cyber Security professional. Here is a link to some information.
+        <link>
+            <text>Cyber Security wiki</text>
+            <url>https://en.wikipedia.org/wiki/Computer_security</url>
+        </link>
+        
+    <button>
+        <text>Start over!</text>
+        <postback>start</postback>
+    </button>           
+        
+        </template>
+</category>
+
+<!--Project Management -->
+<category>
+    <pattern>projectmanagement</pattern>
+        <template>
+            You should consider becoming a Project Manager. Here is a link to some information.
+        <link>
+            <text>Project Management wiki</text>
+            <url>https://en.wikipedia.org/wiki/Project_management</url>
+        </link>
+        
+    <button>
+        <text>Start over!</text>
+        <postback>start</postback>
+    </button>           
+        
+        </template>
+</category>
+
+<!--Q1-->
+
+<category>
+    <pattern>Q1</pattern>
+    <template> 
+        Do you enjoy coding?   
+        
+    <button>
+        <text>Yes</text>
+        <postback>softwaredeveloper</postback>
+    </button>
+  
+    <button>
+        <text>No</text>
+        <postback>Q2</postback>
+    </button>
+  
+    </template>
+</category>
+
+<!--Q2-->
+
+<category>
+    <pattern>Q2</pattern>
+    <template> 
+        Do you enjoy mathematics, statistics and working with data?  
+        
+    <button>
+        <text>Yes</text>
+        <postback>datascientist</postback>
+    </button>
+  
+    <button>
+        <text>No</text>
+        <postback>Q3</postback>
+    </button>
+  
+    </template>
+</category>
+
+<!--Q3-->
+
+<category>
+    <pattern>Q3</pattern>
+    <template> 
+        Do you enjoy graphics and gaming?  
+        
+    <button>
+        <text>Yes</text>
+        <postback>gamedeveloper</postback>
+    </button>
+  
+    <button>
+        <text>No</text>
+        <postback>Q4</postback>
+    </button>
+  
+    </template>
+</category>
+
+<!--Q4-->
+
+<category>
+    <pattern>Q4</pattern>
+    <template> 
+        Do you enjoy security?  
+        
+    <button>
+        <text>Yes</text>
+        <postback>cybersecurity</postback>
+    </button>
+  
+    <button>
+        <text>No</text>
+        <postback>Q5</postback>
+    </button>
+  
+    </template>
+</category>
+
+<!--Q5-->
+
+<category>
+    <pattern>Q5</pattern>
+    <template> 
+        Do you enjoy managing a team?   
+        
+    <button>
+        <text>Yes</text>
+        <postback>projectmanagement</postback>
+    </button>
+  
+    <button>
+        <text>No</text>
+        <postback>lastno</postback>
+    </button>
+  
+    </template>
+</category>
+
+<!--Last No-->
+
+<category>
+    <pattern>lastno</pattern>
+    <template> 
+        I am sorry I did not find you a career option with this quiz! The exciting 
+        part about a computer science degree is that it is very versitle. 
+        You will find your niche! <break/>
+        <break/>
+        Click start to try the quiz again or to read about a few of the options 
+        I have gathered. You can also click the link below to learn about 
+        our Computer Science program at WGU. <break/>
+        <break/>
+        Thanks for chatting with me today!   <break/>
+        <break/>
+        
+    <button>
+        <text>Start</text>
+        <postback>start</postback>
+    </button>
+  
+    <link>
+        <text>WGU Computer Science Degree
+        </text>
+         <url>https://www.wgu.edu/online-it-degrees/computer-science.html</url>
+    </link>
+  
+    </template>
+</category>
+
+</aiml>
